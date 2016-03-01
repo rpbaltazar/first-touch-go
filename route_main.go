@@ -15,7 +15,7 @@ func err(writer http.ResponseWriter, request *http.Request) {
 	}
 }
 
-func index(w http.ResponseWriter, r *http.Request) {
+func index(writer http.ResponseWriter, request *http.Request) {
 	threads, err :=  data.Threads();
 	if err != nil {
 		error_message(writer, request, "Cannot get threads");
